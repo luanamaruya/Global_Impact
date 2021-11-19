@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/style.css}">
+<title>D.INVEST | [[${pageTitle}]]</title>
+</head>
+
+<!-- <meta charset="ISO-8859-1">  -->
+
+<body>
+	<div class="background"></div>
+		<div class="content">
+
+		<h1 class="title">D.INVEST</h1>
+		
+		<h2 class="fraseh2">Registre o valor a ser investido</h2>
+			
+		<form th:action="@{/index/save}" method="post" th:object="${invest}">
+		
+		<div class="form">
+		<div class="input-area">
+		<span class="text">Nome</span>
+		<input type="text" th:field="*{nome}" placeholder="Nome" required>
+		</div>
+
+		<div class="input-area">
+		<span class="text">CPF</span>
+		<input type="text" th:field="*{cpf}" placeholder="CPF" required>
+		</div>
+
+		<div class="input-area">
+		<span class="text">Numero da Conta</span>
+		<input type="text" th:field="*{conta}" placeholder="numero da conta" required>
+		</div>
+
+		<div class="input-area">
+		<span class="text">Valor do Aporte</span>
+		<input type="number" th:field="*{valorAporte}" placeholder="valor a ser insvestido" required>
+		</div>
+
+		<div class="input-area">
+			<label class="acoes">Mercado de Ações
+			<input type="checkbox" th:field="*{acoesFundo}">
+			<span class="checkmark"></span>
+			</label>
+			<label class="crypto">Fundos de Cryptomoeda
+			<input type="checkbox" th:field="*{cryptoFundo}">
+		    <span class="checkmark"></span>
+			</label>
+		</div>
+		<!-- <input name="banco" placeholder="Banco ou Operadora"> -->
+		</div>		
+
+		<div class="btn-area">
+		<button class="btn" type="button" onclick="cancelForm()">Cancelar</button>
+		<button class="btn" type="submit">Salvar</button>
+		</div>
+	</form>
+	</div>
+	
+	<script type="text/javascript">
+		function cancelForm() {
+			window.location = "/"
+		}
+	</script>
+</body>
+</html>

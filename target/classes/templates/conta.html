@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link rel="stylesheet" th:href="@{/index.css}">
+<meta charset="ISO-8859-1">
+<title>D.INVEST</title>
+</head>
+
+<body>
+	<div class="background"></div>
+	<div class="content">
+		<h1 class="indexh1">D.INVEST</h1>
+		<p class="fraseh1">Uma empresa do grupo Dimdim</p>
+		<a class="btn-grad" th:href="@{/index}">EXTRATO DE INVESTIMENTOS</a>
+		<div class="message" th:if="${message}">[[${message}]]</div>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Numero da Conta</th>
+					<th>Numero da Agencia</th>
+					<th>Nome do Banco</th>
+					<th>Numero do Banco</th>
+				</tr>
+			</thead>
+			<tbody>
+				<th:block th:each="invest:${listInvest}">
+					<tr>
+						<td>[[${invest.id}]]</td>
+						<td>[[${invest.nome}]]</td>
+						<td>[[${invest.cpf}]]</td>
+						<td>[[${invest.conta}]]</td>
+						<td>[[${invest.aporte}]]</td>
+						<td>[[${invest.acoesFundo ? 'Yes' : 'No' }]]</td>
+						<td>[[${invest.cryptoFundo ? 'Yes' : 'No' }]]</td>
+						<td class="btn-area">
+							<a class="btn btn-blue" th:href="@{'/invest/edit/' + ${invest.id}}">Atualizar</a>
+							<a class="btn btn-red" th:href="@{'/invest/delete/' + ${invest.id}}">Deletar</a>
+						</td>
+					</tr>
+				</th:block>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

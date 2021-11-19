@@ -1,0 +1,139 @@
+@charset "ISO-8859-1";
+.content {
+	display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2rem;
+	left: 0;
+	right: 0;
+	width: 1110px;
+}
+
+.content .title {
+	color: #FAFAFA;
+	font-size: 2rem;
+	font-weight: 500;
+	text-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.indexh1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+}
+
+.fraseh1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.1em;
+    font-size: large;
+}
+
+.btn-grad {
+	background-color: #203b4e;
+	width: 150px;
+	height: 50px;
+    margin: 2rem 0;
+    padding: .8rem 0;
+    text-align: center;
+    text-decoration: none;
+    transition: 1.3s;
+    background-size: 200% auto;
+    color: #FAFAFA;   
+    font-family: Arial, Helvetica, sans-serif;         
+	
+}
+
+.btn-grad:hover {
+	background-position: right center;
+    color: #FAFAFA;
+    text-decoration: none;
+}
+         
+
+.btn-grad, .message {
+	z-index: 2
+}
+
+.message {
+	margin-bottom: 15px;
+    padding: .8rem;
+    width: 100%;
+    color: #FAFAFA;
+    text-align: center;
+    opacity: .9;
+    background-color: #203b4e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+	z-index: 2;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	overflow: hidden;
+	box-shadow: 2px 2px 5px rgba(32, 32, 32, .3);
+	background: #FAFAFA;
+	text-align: center;
+	width: 1100px;
+}
+
+th {
+	background: #bacbd8;
+	text-transform: uppercase;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th, td {
+    padding: 12px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-area {
+	display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.btn {
+	width: 66px;
+}
+
+.btn-red {
+	background-color: #8f0404;
+	text-align: center;
+	text-decoration: none;
+	padding: .5rem .5rem;
+    transition: 1.3s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn-red:hover {
+	background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-blue {
+	background-color: #bacbd8;
+	text-align: center;
+	text-decoration: none;
+	padding: .5rem .5rem;
+    transition: 1.3s;
+    background-size: 200% auto;
+    color: #000000;            
+    box-shadow: 0 0 20px #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+}
+.btn-blue:hover {
+	background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
